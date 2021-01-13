@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1091,831" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1005,841" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,6 +64,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -112,7 +113,7 @@
           <av:Size x:Key="ShapeSize">200,66</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap:VirtualizedContainerService.HintSize="532,1184" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence sap:VirtualizedContainerService.HintSize="532,1076" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="[Environment.CurrentDirectory + &quot;\Data\&quot;]" Name="g_dataDirPath" />
           <Variable x:TypeArguments="x:String" Default="[g_dataDirPath + &quot;Input\&quot;]" Name="g_inputDirPath" />
@@ -123,13 +124,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Input Files" sap:VirtualizedContainerService.HintSize="490,1092" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(g_inputDirPath, &quot;*.txt&quot;)]">
+        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Input Files" sap:VirtualizedContainerService.HintSize="490,984" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(g_inputDirPath, &quot;*.txt&quot;)]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="filePath" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,958" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,850" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str" />
                 </Sequence.Variables>
@@ -147,28 +148,6 @@
                     <InArgument x:TypeArguments="x:String">[System.IO.Path.GetFileName(filePath.ToString)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Day" sap:VirtualizedContainerService.HintSize="412,68" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93ceeea8-2193-4abf-8768-fa20ee40ecdd" Selector="[&quot;&lt;html app='firefox.exe' title='Matadorsuite' /&gt;&lt;webctrl css-selector='*' parentid='ViewTaskPersonalPlanWorkTimeSheet' tag='DIV' innertext='&quot; + Split(fileName, &quot;.&quot;)(0) + &quot;*' /&gt;&quot;]">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
                 <ui:ReadTextFile Content="[str]" DisplayName="Read Text File" FileName="[filePath.ToString]" sap:VirtualizedContainerService.HintSize="412,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
                 <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,438" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[Split(str, &quot;#&quot;)]">
                   <ui:ForEach.Body>
@@ -191,6 +170,9 @@
                             <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
                               <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="g_timeout" />
                             </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_day">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Split(fileName, &quot;.&quot;)(0)" />
+                            </InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_pid">
                               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="jsonData(&quot;pId&quot;).ToString" />
                             </InArgument>
@@ -207,7 +189,7 @@
                               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="jsonData(&quot;durat&quot;).ToString" />
                             </InArgument>
                             <InArgument x:TypeArguments="x:Boolean" x:Key="in_wfh">
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="If(jsonData(&quot;acivity&quot;).ToString.Equals(&quot;0&quot;), false, true)" />
+                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="If(jsonData(&quot;isWFH&quot;).ToString.Equals(&quot;0&quot;), false, true)" />
                             </InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>

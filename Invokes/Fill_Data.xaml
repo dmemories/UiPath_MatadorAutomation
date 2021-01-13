@@ -1,6 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Fill_Data" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_timeout" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_day" Type="InArgument(x:String)" />
     <x:Property Name="in_pid" Type="InArgument(x:String)" />
     <x:Property Name="in_activity" Type="InArgument(x:String)" />
     <x:Property Name="in_description" Type="InArgument(x:String)" />
@@ -11,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1121,2315</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1121,2423</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Fill_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -71,19 +72,19 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Fill_Data" sap:VirtualizedContainerService.HintSize="1131,2150" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Fill_Data" sap:VirtualizedContainerService.HintSize="1131,2258" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="1089,2058" sap2010:WorkflowViewState.IdRef="BrowserScope_1" Selector="&lt;html app='firefox.exe' title='Matadorsuite' /&gt;" TimeoutMS="[in_timeout]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="1089,2166" sap2010:WorkflowViewState.IdRef="BrowserScope_1" Selector="&lt;html app='firefox.exe' title='Matadorsuite' /&gt;" TimeoutMS="[in_timeout]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1055,1950" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1055,2058" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="foundWFH" />
             </Sequence.Variables>
@@ -92,6 +93,28 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Day" sap:VirtualizedContainerService.HintSize="1013,68" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93ceeea8-2193-4abf-8768-fa20ee40ecdd" Selector="[&quot;&lt;html app='firefox.exe' title='Matadorsuite' /&gt;&lt;webctrl css-selector='*' parentid='ViewTaskPersonalPlanWorkTimeSheet' tag='DIV' innertext='&quot; + in_day + &quot;*' /&gt;&quot;]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
             <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click New Worklog" sap:VirtualizedContainerService.HintSize="1013,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
@@ -142,7 +165,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="adbed60e-9f1d-4735-96a7-3114a554955d" InformativeScreenshot="c71263fe1da30c81ef5eab20cf940309" Selector="[&quot;&lt;webctrl parentid='*' tag='SPAN' innertext='&quot; + in_pid + &quot;' /&gt;&quot;]" TimeoutMS="[in_timeout]">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="adbed60e-9f1d-4735-96a7-3114a554955d" InformativeScreenshot="c71263fe1da30c81ef5eab20cf940309" Selector="[&quot;&lt;webctrl parentid='*' tag='SPAN' innertext='&quot; + in_pid + &quot;*' /&gt;&quot;]" TimeoutMS="[in_timeout]">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -180,7 +203,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a2bf8b8-462b-448d-8cb2-bd1f34ebee4b" InformativeScreenshot="337a20e61261ef83780fe1df0e970a63" Selector="[&quot;&lt;webctrl parentid='*' tag='SPAN' innertext='&quot; + in_activity + &quot;' /&gt;&quot;]" TimeoutMS="[in_timeout]">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a2bf8b8-462b-448d-8cb2-bd1f34ebee4b" InformativeScreenshot="337a20e61261ef83780fe1df0e970a63" Selector="[&quot;&lt;webctrl parentid='*' tag='SPAN' innertext='&quot; + in_activity + &quot;*' /&gt;&quot;]" TimeoutMS="[in_timeout]">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -260,7 +283,7 @@
             </ui:SelectItem>
             <ui:UiElementExists DisplayName="Element Exists (WFH)" Exists="[foundWFH]" sap:VirtualizedContainerService.HintSize="1013,68" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10eea362-38b7-41e3-965e-a6dc3aa7ce5c" Selector="&lt;webctrl aaname='WFH : ' tag='LABEL' innertext='WFH : ' isleaf='1' parentclass='modal-footer' /&gt;" TimeoutMS="3000">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10eea362-38b7-41e3-965e-a6dc3aa7ce5c" Selector="&lt;html app='firefox.exe' title='Matadorsuite' /&gt;&lt;webctrl aaname='WFH : ' tag='LABEL' parentclass='modal-footer' /&gt;" TimeoutMS="3000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>

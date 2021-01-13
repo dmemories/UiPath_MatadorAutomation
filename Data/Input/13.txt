@@ -1,0 +1,24 @@
+{
+	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
+	"acivity": "Stand up meeting with Development Team",
+	"descipt": "Stand up Meeting",
+	"type"	 : "Meeting",
+	"durat"	 : "1",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
+	"acivity": "Technical Support - Knowledge sharing",
+	"descipt": "Dev USMAP Project (Filter Input Process)",
+	"type"	 : "Develop",
+	"durat"	 : "3",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
+	"acivity": "Technical Support - Knowledge sharing",
+	"descipt": "Meeting & Analysis MS Power Automate",
+	"type"	 : "Meeting",
+	"durat"	 : "4",
+	"isWFH"	 : "0"
+}
