@@ -4,21 +4,21 @@
 	"descipt": "Stand up Meeting",
 	"type"	 : "Meeting",
 	"durat"	 : "1",
-	"isWFH"	 : "0"
+	"isWFH"	 : "1"
 }#
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
-	"acivity": "Technical Support - Knowledge sharing",
-	"descipt": "Dev USMAP Project (Filter Input Process)",
+	"acivity": "USMAP Provisioning Service SMS (SSS L+ , SMS Download)",
+	"descipt": "Dev USMAP Project",
 	"type"	 : "Develop",
-	"durat"	 : "3",
-	"isWFH"	 : "0"
+	"durat"	 : "2",
+	"isWFH"	 : "1"
 }#
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
-	"acivity": "Technical Support - Knowledge sharing",
-	"descipt": "Meeting & Analysis MS Power Automate",
-	"type"	 : "Meeting",
-	"durat"	 : "4",
-	"isWFH"	 : "0"
+	"acivity": "Technical Support - RPA Clinic*",
+	"descipt": "RPA Clinic",
+	"type"	 : "Support",
+	"durat"	 : "5",
+	"isWFH"	 : "1"
 }
