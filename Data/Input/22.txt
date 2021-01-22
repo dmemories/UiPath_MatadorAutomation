@@ -11,14 +11,14 @@
 	"acivity": "USMAP Provisioning Service SMS (SSS L+ , SMS Download)",
 	"descipt": "Dev USMAP Project",
 	"type"	 : "Develop",
-	"durat"	 : "2",
+	"durat"	 : "5",
 	"isWFH"	 : "1"
 }#
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
-	"acivity": "Technical Support - RPA Clinic*",
-	"descipt": "RPA Clinic",
-	"type"	 : "Support",
-	"durat"	 : "5",
+	"acivity": "Technical Support - Monitor process*",
+	"descipt": "Monitoring Playgound & EBO_CarConnected",
+	"type"	 : "Analysis",
+	"durat"	 : "2",
 	"isWFH"	 : "1"
 }

@@ -1,0 +1,1 @@
+"C:\Users\Alkaiser\AppData\Local\UiPath\app-20.10.3-beta0291\UiRobot.exe" execute --file "C:\Users\Alkaiser\Desktop\UiPath_MatadorAutomation\Main.xaml"
