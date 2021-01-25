@@ -4,21 +4,29 @@
 	"descipt": "Stand up Meeting",
 	"type"	 : "Meeting",
 	"durat"	 : "1",
-	"isWFH"	 : "1"
+	"isWFH"	 : "0"
 }#
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
 	"acivity": "USMAP Provisioning Service SMS (SSS L+ , SMS Download)",
 	"descipt": "Dev USMAP Project",
 	"type"	 : "Develop",
-	"durat"	 : "5",
-	"isWFH"	 : "1"
+	"durat"	 : "3",
+	"isWFH"	 : "0"
 }#
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
-	"acivity": "Technical Support - Monitor process*",
+	"acivity": "Technical Support - Knowledge sharing",
+	"descipt": "Meeting (How to Matador)",
+	"type"	 : "Meeting",
+	"durat"	 : "2",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
+	"acivity": "Technical Support - Monitor process",
 	"descipt": "Monitoring Playgound & EBO_CarConnected",
 	"type"	 : "Analysis",
 	"durat"	 : "2",
-	"isWFH"	 : "1"
+	"isWFH"	 : "0"
 }

@@ -3690,15 +3690,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alkaiser\\.nuget\\packages\\": {}
+    "C:\\Users\\piyab505\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Matador Automation",
       "projectName": "Matador Automation",
-      "projectPath": "C:\\Users\\Alkaiser\\Desktop\\UiPath_MatadorAutomation\\.local",
-      "packagesPath": "C:\\Users\\Alkaiser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alkaiser\\Desktop\\UiPath_MatadorAutomation\\.local"
+      "projectPath": "C:\\Users\\piyab505\\Desktop\\Matador Automation\\.local",
+      "packagesPath": "C:\\Users\\piyab505\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\piyab505\\Desktop\\Matador Automation\\.local"
     },
     "frameworks": {
       "net461": {
