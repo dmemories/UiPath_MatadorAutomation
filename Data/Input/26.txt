@@ -17,8 +17,8 @@
 {
 	"pId"	 : "20201386 - Project - RPA - Build BOT by IT team",
 	"acivity": "Technical Support - Knowledge sharing",
-	"descipt": "Meeting (How to Matador)",
-	"type"	 : "Meeting",
+	"descipt": "Create & Write Document (How to download UiPath latest version)",
+	"type"	 : "Support",
 	"durat"	 : "2",
 	"isWFH"	 : "0"
 }#
