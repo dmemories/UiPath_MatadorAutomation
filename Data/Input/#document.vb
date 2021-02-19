@@ -1,4 +1,6 @@
 {
+	[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021
+
 	"pId"	: "20201386 - Project - RPA - Build BOT by IT team",
 	"pId"	: "XXXXX",
 	"pId"	: "XXXXX",
@@ -17,3 +19,13 @@
 	"type": "Support",
 	"type": "Test",
 }
+
+
+{
+	"pId"	 : "[Doing] 20200232 - Project -RPA Intelligence Automation",
+	"acivity": "UiPath Process Mining",
+	"descipt": "Testing & Dev USMAP Project",
+	"type"	 : "Develop",
+	"durat"	 : "3",
+	"isWFH"	 : "0"
+}#

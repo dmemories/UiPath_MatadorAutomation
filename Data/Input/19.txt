@@ -1,0 +1,32 @@
+{
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Stand up meeting with Development Team",
+	"descipt": "Stand up Meeting",
+	"type"	 : "Meeting",
+	"durat"	 : "1",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Technical Support - Knowledge sharing",
+	"descipt": "Support User (UiPath + SAP)",
+	"type"	 : "Support",
+	"durat"	 : "3",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "[Doing] 20200232 - Project -RPA Intelligence Automation",
+	"acivity": "UiPath Process Mining",
+	"descipt": "Support User (Process Mining)",
+	"type"	 : "Develop",
+	"durat"	 : "2",
+	"isWFH"	 : "0"
+}#
+{
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Technical Support - Monitor process",
+	"descipt": "Monitoring Playgound & EBO_CarConnected",
+	"type"	 : "Analysis",
+	"durat"	 : "2",
+	"isWFH"	 : "0"
+}
