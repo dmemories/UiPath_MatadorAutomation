@@ -21,11 +21,38 @@
 }
 
 
+
+
+-----------------------------------------------
+#
+{
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Technical Support - RPA Clinic",
+	"descipt": "RPA Clinic (UiPath) 2 Session",
+	"type"	 : "Support",
+	"durat"	 : "5",
+	"isWFH"	 : "0"
+}
+
+-----------------------------------------------
+#
 {
 	"pId"	 : "[Doing] 20200232 - Project -RPA Intelligence Automation",
 	"acivity": "UiPath Process Mining",
-	"descipt": "Testing & Dev USMAP Project",
+	"descipt": "Meeting Process Mining",
 	"type"	 : "Develop",
 	"durat"	 : "3",
 	"isWFH"	 : "0"
-}#
+}
+
+
+-----------------------------------------------
+#
+{
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Technical Support - Knowledge sharing",
+	"descipt": "Support User",
+	"type"	 : "Support",
+	"durat"	 : "2",
+	"isWFH"	 : "0"
+}

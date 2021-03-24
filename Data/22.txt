@@ -8,18 +8,18 @@
 }#
 {
 	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
-	"acivity": "Technical Support - Knowledge sharing",
-	"descipt": "Support User (UiPath + SAP)",
+	"acivity": "Technical Support - RPA Clinic",
+	"descipt": "RPA Clinic (UiPath) 3 Session",
 	"type"	 : "Support",
-	"durat"	 : "3",
+	"durat"	 : "4",
 	"isWFH"	 : "0"
 }#
 {
-	"pId"	 : "[Doing] 20200232 - Project -RPA Intelligence Automation",
-	"acivity": "UiPath Process Mining",
-	"descipt": "Support User (Process Mining)",
+	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
+	"acivity": "Technical Support - Fault finding",
+	"descipt": "(RPA Clinic Google Script) Design & Analysis & Dev",
 	"type"	 : "Develop",
-	"durat"	 : "2",
+	"durat"	 : "1",
 	"isWFH"	 : "0"
 }#
 {
