@@ -8,18 +8,10 @@
 }#
 {
 	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
-	"acivity": "Technical Support - RPA Clinic",
-	"descipt": "RPA Clinic (UiPath) 3 Session",
-	"type"	 : "Support",
-	"durat"	 : "4",
-	"isWFH"	 : "0"
-}#
-{
-	"pId"	 : "[Doing] 20201386 - Project - RPA - Build BOT by IT team 2021",
 	"acivity": "Technical Support - Fault finding",
-	"descipt": "(RPA Clinic Google Script) Design & Analysis & Dev",
+	"descipt": "(RPA Clinic Google Script) Complete staff system & Testing",
 	"type"	 : "Develop",
-	"durat"	 : "1",
+	"durat"	 : "5",
 	"isWFH"	 : "0"
 }#
 {
