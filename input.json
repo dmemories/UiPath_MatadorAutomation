@@ -1,0 +1,11 @@
+[
+
+{
+    "day": 1,
+    "activities": [
+        { "name": "Stand up meeting with Development Team", "dur": 1 },
+        { "name": "Monitoring Playground & EBO_CarConnected", "dur": 2 }
+    ]
+}
+
+]
