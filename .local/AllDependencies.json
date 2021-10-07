@@ -7871,9 +7871,9 @@
     "restore": {
       "projectUniqueName": "Matador Automation",
       "projectName": "Matador Automation",
-      "projectPath": "C:\\Users\\Alkaiser\\Desktop\\Matador Automation\\.local",
+      "projectPath": "C:\\Users\\Alkaiser\\Desktop\\UiPath_MatadorAutomation\\.local",
       "packagesPath": "C:\\Users\\Alkaiser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alkaiser\\Desktop\\Matador Automation\\.local"
+      "outputPath": "C:\\Users\\Alkaiser\\Desktop\\UiPath_MatadorAutomation\\.local"
     },
     "frameworks": {
       "net461": {

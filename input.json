@@ -1,10 +1,11 @@
 [
 
 {
-    "day": 1,
+    "day": 7,
     "activities": [
         { "name": "Stand up meeting with Development Team", "dur": 1 },
-        { "name": "Monitoring Playground & EBO_CarConnected", "dur": 2 }
+        { "name": "Dev & Monitor IC_Analysis Case", "dur": 3 },
+        { "name": "Dev & Monitor ACC_Mobile_Care", "dur": 4 }
     ]
 }
 
