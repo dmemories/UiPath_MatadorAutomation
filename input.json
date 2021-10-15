@@ -1,11 +1,11 @@
 [
 
 {
-    "day": 7,
+    "day": 17,
     "activities": [
-        { "name": "Stand up meeting with Development Team", "dur": 1 },
-        { "name": "Dev & Monitor IC_Analysis Case", "dur": 3 },
-        { "name": "Dev & Monitor ACC_Mobile_Care", "dur": 4 }
+        { "name": "Dev ACC_MobileCareAnsurian Case", "dur": 4 },
+		{ "name": "Transfer RPA Clinic Web Booking", "dur": 1 },
+        { "name": "Monitoring Playground & EBO_CarConnected", "dur": 2 }
     ]
 }
 

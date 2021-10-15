@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="dataArr" Type="InArgument(s:String[])" />
   </x:Members>
@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>776.834355828221,1538.35582822086</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>792.736196319018,1318.08588957055</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -85,10 +85,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="589.546012269939,1473.57055214724" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="555.386503067485,1253.30061349693" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="5000" Name="timeout" />
       <Variable x:TypeArguments="njl:JObject[]" Name="jsonObjArr" />
@@ -98,76 +97,56 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Data workflow" sap:VirtualizedContainerService.HintSize="547.141104294479,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Invokes\Get_Data.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Data workflow" sap:VirtualizedContainerService.HintSize="512.981595092024,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Invokes\Get_Data.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="njl:JObject[]" x:Key="out_jsonObjArr">[jsonObjArr]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: Matadorsuite" sap:VirtualizedContainerService.HintSize="547.141104294479,1167.31288343558" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="9b49eccb-30f3-44f6-ba4d-2f230ab90e4d" Timeout="[timeout]" Version="V1">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
+    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512.981595092024,947.042944785276" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[jsonObjArr]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JObject">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
           </ActivityAction.Argument>
-          <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512.981595092024,951.754601226994" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[jsonObjArr]">
-            <ui:ForEach.Body>
-              <ActivityAction x:TypeArguments="njl:JObject">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Item Do" sap:VirtualizedContainerService.HintSize="476.466257668712,826.895705521472" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434.061349693252,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;Day : &quot; + item(&quot;day&quot;).ToString]" />
-                  <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434.061349693252,531.828220858896" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[item(&quot;activities&quot;)]">
-                    <ui:ForEach.Body>
-                      <ActivityAction x:TypeArguments="njl:JObject">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="njl:JObject" Name="activity" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376.343558282209,406.969325153374" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.938650306748,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Activity : &quot; + activity(&quot;name&quot;).ToString]" />
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.938650306748,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;Dur : &quot; + activity(&quot;dur&quot;).ToString]" />
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke New_Worklog workflow" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Invokes\New_Worklog.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">
-                                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="timeout" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_activityName">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="activity(&quot;name&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_activityDur">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="activity(&quot;dur&quot;).ToString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_day">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item(&quot;day&quot;).ToString" />
-                              </InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ForEach.Body>
-                  </ui:ForEach>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434.061349693252,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text=" " />
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEach.Body>
-          </ui:ForEach>
+          <Sequence DisplayName="Item Do" sap:VirtualizedContainerService.HintSize="476.466257668712,823.361963190184" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434.061349693252,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;Day : &quot; + item(&quot;day&quot;).ToString]" />
+            <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434.061349693252,529.472392638037" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[item(&quot;activities&quot;)]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="njl:JObject">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="njl:JObject" Name="activity" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376.343558282209,405.791411042945" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.938650306748,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Activity : &quot; + activity(&quot;name&quot;).ToString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.938650306748,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;Dur : &quot; + activity(&quot;dur&quot;).ToString]" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke New_Worklog workflow" sap:VirtualizedContainerService.HintSize="333.938650306748,111.901840490798" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Invokes\New_Worklog.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="in_timeout">[timeout]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_activityName">[activity("name").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_activityDur">[activity("dur").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_day">[item("day").ToString]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434.061349693252,60.6625766871166" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text=" " />
+          </Sequence>
         </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-12, -12, 2584, 1396" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGREAABkRAZCHpWgAAAQqSURBVFhHpZdNbFRVFMclhoVxaVwZ4tIY43udL5pQFANdUaEoIdIQQlCJInFDIo2AbFwRgiEppom4MJrGoKnGKoLt9IOWWtqxRDSWAEVsh3Y6LThOP5220+P/vDfvcufOeTPTeJLfgnfuOf9/31zOve8RIlqzWkYClfvB9T8D65eiVmCh1wpejNmhF6S1pSjbAAS3gE6QAcTcBReer1C0W4GZXiv07YAdCkg9JIoagMiz4DyY8UR1TAM6HVYg9bMdavrFDj8j9fYoMIDGT4AGkPSE/IjX7KALVkA04PEj6LSCU3126BzezDpTzzGAZmvB++CO17wcZlujNPDWO6KwBJvpsoIJvJmGa3b4Sd1A1mxeirGttUTZLN3v7xfFSnEJ/C8D6c+buIETV+r2iCLFaLMCSyhVBsRN5kd842bKzs454hyJ1jZRpBjYFymUKgNxU6QYf58+4wirWFmhzpptopAf3VbwJiqVgZgp4kt4Ay2NJxxdPUbOfy0K+YHh1Y4yZaC5QMiHqSNHHUGOzK3btIKNyJH9N0PRl7aIYhL4b9mIMmXgpCnkR+b3PxxBjuTheop/15L7F9HwuU9FMYl+O3QIJcrAXlNIYmL/AUeIYzk5SX/h57hc+4qzBzgWp6fpUuUGUdAkZocjKFEGnjPFJOaiHY4Qxz+Nn6hRPP5Ta+4p0dCp0wViJjyQhioia7HcNcBIgjpjL7/qDB4nlpfpXvVWZaBn1273OWIhkaCLwUiBqI43AxjdwJIpqjP95VdY5sYcRjA/0w+jye6eXJbo16PH8wRNOqzgAywrMJDSBXXiL1bTyvw8lrmROttIyQMHKQGuvv6mw42PHs6GmeHhooeUNwMY3YDvQZQ604Alq4vYoXdFccabAYxuoMcUZkYjVbQ8kcSS1cWDwUFRnPFmAKMbaDLFmfvHTiDtRjY9TbMtPyhmAM8BnUyKR7wbvXv2igau2qGDSBcY+MAUZzJDN5B2I/3ZF3k56UZ08+zHudU4pKLtBXkG98cQ0gUGavXmzMQbbyP1MMa278zLSwbaNuGkXFx0CzCgurbh1qTleQb8VhF5FNkCA0/pzZn5rm6k3FgYiOXlGMkAc6/l+1wV0WjzN3k5fQYwygCjNx/bsUuNWI6p+mN54oyfgSuv1eWqsG/wNqKbq1UOl1U1AxjTgLpyj+/cTVM4bCYPH3EYrdxYtgHm2nv1dP34CYeumu3q+WVtBjCmgTrgO5BMihkw4d++xwr2YQPm3YzzDHig+YdAvQ0/yjWAv/ouruRVkpZogIHAY4A/SnwvrKUM4EspjXN/n9Tfw9eAB4TWgT5d2MPPAO90TLuTUj+TkgY8IFgFRooZ4Ls+vg2bB+3w41IPibINeEB4H0jrBnIbLIbf+WmpphirNuABA6fuBNYv4FMrDuFN0prS0Jr/ACjiUIPHWiS1AAAAAElFTkSuQmCC" Selector="&lt;html app='firefox.exe' title='Matadorsuite'/&gt;" Url="https://ais.matadorsuite.com/personal/worklog" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
-    <ui:CommentOut Body="{x:Null}" DisplayName="End" sap:VirtualizedContainerService.HintSize="547.141104294479,21.7914110429448" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:CommentOut Body="{x:Null}" DisplayName="End" sap:VirtualizedContainerService.HintSize="512.981595092024,21.7914110429448" sap2010:WorkflowViewState.IdRef="CommentOut_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
